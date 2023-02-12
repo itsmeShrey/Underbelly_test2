@@ -32,6 +32,9 @@ if (user) {
 }
 });
 app.use(express.static(path.join(__dirname, 'public')));
-app.listen(100,function(){
-  console.log("The server has just started at point 500");
-});
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3001;
+}
+app.listen(port, function () {
+  console.log(`Server started successfully ${port}`)});

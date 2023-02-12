@@ -1,0 +1,304 @@
+* {
+  padding: 0;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* body{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    width: 100%;
+} */
+.introScreen {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 500;
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  background-color: black;
+  transition: 1.5s;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 20vh;
+  width: 40vw;
+  z-index: 500;
+  /* background-color: rgb(149, 68, 68); */
+}
+#Name {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  z-index: 500;
+  /* bottom: -100px; */
+  transform: translate(-50%, -50%);
+  animation: fill 1.5s ease-in-out 2s forwards;
+}
+
+#Name path:nth-child(1) {
+  stroke-dasharray: 322.4596252441406;
+  stroke-dashoffset: 322.4596252441406;
+  animation: strokeAnim 2s ease-in-out forwards;
+}
+#Name path:nth-child(2) {
+  stroke-dasharray: 386.6153259277344;
+  stroke-dashoffset: 386.6153259277344;
+  animation: strokeAnim 2s ease-in-out 0.3s forwards;
+}
+#Name path:nth-child(3) {
+  stroke-dasharray: 334.20709228515625;
+  stroke-dashoffset: 334.20709228515625;
+  animation: strokeAnim 2s ease-in-out 0.6s forwards;
+}
+#Name path:nth-child(4) {
+  stroke-dasharray: 284.54400634765625;
+  stroke-dashoffset: 284.54400634765625;
+  animation: strokeAnim 2s ease-in-out 0.9s forwards;
+}
+#Name path:nth-child(5) {
+  stroke-dasharray: 356.193359375;
+  stroke-dashoffset: 356.193359375;
+  animation: strokeAnim 2s ease-in-out 1.2s forwards;
+}
+#Name path:nth-child(6) {
+  stroke-dasharray: 374.6427001953125;
+  stroke-dashoffset: 374.6427001953125;
+  animation: strokeAnim 2s ease-in-out 1.5s forwards;
+}
+#Name path:nth-child(7) {
+  stroke-dasharray: 284.5440673828125;
+  stroke-dashoffset: 284.5440673828125;
+  animation: strokeAnim 2s ease-in-out 1.5s forwards;
+}
+#Name path:nth-child(8) {
+  stroke-dasharray: 206.592041015625;
+  stroke-dashoffset: 206.592041015625;
+  animation: strokeAnim 2s ease-in-out 1.5s forwards;
+}
+#Name path:nth-child(9) {
+  stroke-dasharray: 206.592041015625;
+  stroke-dashoffset: 206.592041015625;
+  animation: strokeAnim 2s ease-in-out 1.5s forwards;
+}
+#Name path:nth-child(10) {
+  stroke-dasharray: 248.10098266601562;
+  stroke-dashoffset: 248.10098266601562;
+  animation: strokeAnim 2s ease-in-out 1.5s forwards;
+}
+
+@keyframes strokeAnim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: rgb(245, 122, 70);
+  }
+}
+
+/* Login Page styling */
+
+.Main {
+  height: 100vh;
+  width: 100vw;
+  background: url(./pexels-photo-7135057.webp) no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'poppins', sans-serif;
+}
+.outerBox {
+  width: 75%;
+  height: 80%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3.5rem;
+  padding: 1.5rem;
+  box-shadow:5px 15px 60px rgb(0, 0, 0) ;
+}
+.innerBox {
+  height: 100%;
+  width: 100%;
+  /* background-color: aliceblue; */
+  position: relative;
+}
+.leftBox {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 45%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  transition: 0.8s ease-in-out;
+}
+#colorSpan{
+  color: rgb(245, 122, 70);
+}
+
+/* Login Form styling */
+form{
+  max-width: 350px;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: blueviolet; */
+  margin: 0 auto;
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  transition: opacity 0.02s 0.4s;
+}
+form.signUpForm{
+  opacity: 0;
+  pointer-events: none;
+}
+.logo{
+  /* height: 60px;
+  width: 150px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img{
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  display: inline-block;
+  margin-right: 5px;
+}
+.logo h3{
+  font-weight: bolder;
+  font-size: 1.3rem;
+  letter-spacing: -0.8px;
+  /* margin-top: -9px; */
+}
+.heading{
+  margin-top: -30px;
+}
+.heading h2{
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+.heading p{
+  font-size: 0.8rem;
+  color: #7d7d7d;
+  display: inline-block;
+  font-weight: 500;
+}
+.toggle{
+  color: black;
+  font-size: 0.8rem;
+  text-decoration: none;
+  font-weight: 800;
+  transition: 0.3s;
+}
+.toggle:hover{
+  color: #8371fd;
+}
+
+.inputWrap{
+  position: relative;
+  height: 30px;
+  margin-bottom: 1.5rem;
+}
+.inputField{
+  position: absolute;
+  background-color: none;
+  border: none;
+  border-bottom: 1.5px solid #bbb;
+  outline: none;
+  height: 100%;
+  width: 80%;
+  padding: 0px;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+.inputField.active{
+  border-bottom: 1.5px solid black;
+}
+.inputField.active + label{
+  color: black;
+  font-size: 0.7rem;
+  top: -3px;
+}
+label{
+  position: absolute;
+  color: rgb(112, 112, 112);
+  left: 0px;
+  top: 50%;
+  transform: translateY(-40%);
+  font-size: 0.9rem;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.signInBtn{
+  height: 35px;
+  width: 85%;
+  border: none;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.signInBtn a{
+  text-decoration: none;
+  color: white;
+}
+.signInBtn:hover{
+  background-color:  #8371fd;
+}
+.text{
+  color: #595959;
+  font-size: 0.85rem;
+}
+.text a{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.text a:hover{
+  color:  #8371fd;
+}
+
+.Main.signUPMode .leftBox{
+  left: 55%;
+}
+.Main.signUPMode .rightBox{
+  left: 0%;
+}
+.Main.signUPMode form.signINForm{
+  opacity: 0;
+  pointer-events: none;
+}
+.Main.signUPMode form.signUpForm{
+  opacity: 1;
+  pointer-events: all;
+}
+.rightBox{
+  position: absolute;
+  top: 0px;
+  left: 45%;
+  width: 55%;
+  height: 100%;
+  background: url(./Underbelly-VIT-Bhopal-1-scaled-e1580792798138.jpg) no-repeat center center/cover;
+  border-radius: 2rem;
+  transition: 0.8s ease-in-out;
+}

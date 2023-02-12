@@ -1,0 +1,110 @@
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.width-100 {
+  width: 98.7vw;
+}
+.container{
+  transition: 1s ease-in-out;
+}
+.kartForm {
+  height: 80vh;
+  width: 60vw;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  border-radius: 25px;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(15px);
+  z-index: 999;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-family: "El Messiri", sans-serif;
+}
+.displayNone{
+  display: none;
+}
+.displayBlock{
+  display: block;
+}
+.upperBox {
+  /* background-color: bisque; */
+  width: 80%;
+}
+.lowerBox {
+  /* background-color: brown; */
+  width: 80%;
+}
+#colorSpan {
+  color: #ff214f;
+}
+.heading {
+  font-weight: bolder;
+  font-size: 1.3rem;
+  letter-spacing: -0.8px;
+}
+.inputWrap {
+  position: relative;
+  height: 30px;
+  margin-bottom: 1.5rem;
+}
+.inputField {
+  position: absolute;
+  background-color: none;
+  border: none;
+  border-bottom: 1.5px solid #bbb;
+  outline: none;
+  height: 100%;
+  width: 80%;
+  padding: 0px;
+  font-size: 0.95rem;
+  transition: 0.3s;
+  background: none;
+  border-bottom: 1px solid white;
+}
+.inputField.active {
+  border-bottom: 1.5px solid rgb(255, 255, 255);
+}
+.inputField.active + label {
+  color: rgb(255, 255, 255);
+  font-size: 0.7rem;
+  top: -3px;
+}
+label {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  left: 0px;
+  top: 50%;
+  transform: translateY(-40%);
+  font-size: 0.9rem;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.addBtn {
+  height: 35px;
+  width: 35%;
+  border: none;
+  display: inline-block;
+  background-color: black;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+.addBtn:hover {
+  background-color: #8371fd;
+}
+
+#kart:hover {
+  color: lightgray;
+}

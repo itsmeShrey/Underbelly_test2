@@ -14,15 +14,14 @@ app.use(
   })
 );
 app.get("/",function(req,res){
-  console.log(req);
+  // console.log(req);
   res.sendFile(__dirname+"/index.html");
 });
 app.post("/signup",async(req,res)=>{
   let data = new User(req.body);
   let result = await data.save();
-  result = result.toObject();
-  res.send(result);
   console.log(result);
+  res.sendFile(__dirname+"/index.html");
 });
 app.post("/login", async (req, res) => {
   let user = await User.findOne(req.body);
